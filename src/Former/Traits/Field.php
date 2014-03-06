@@ -326,7 +326,14 @@ abstract class Field extends FormerObject implements FieldInterface
    */
   public function getLabel()
   {
-    return $this->label;
+    if($this->group)
+    {
+      return $this->group->getFormattedLabel();
+    }
+    else
+    {
+      return $this->label;
+    }
   }
 
   ////////////////////////////////////////////////////////////////////

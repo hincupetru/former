@@ -23,6 +23,6 @@ class FrameworkTest extends FormerTests
 
     $text = $this->former->text('foobar')->__toString();
 
-    $this->assertEquals('<label for="foobar">Foobar</label><input id="foobar" type="text" name="foobar">', $text);
+    $this->assertEquals('<label for="foobar" class="control-label">Foobar</label><input id="foobar" type="text" name="foobar">', $text);
   }
 }
