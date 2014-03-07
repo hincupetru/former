@@ -181,7 +181,7 @@ class Select extends Field
     foreach ($options as $value => $text) {
       if (is_array($text) and isset($text['value'])) {
         $attributes = $text;
-        $text       = $value;
+        $text       = isset($text['text']) ? $text['text'] : $value;
         $value      = null;
       } else {
         $attributes = array();
